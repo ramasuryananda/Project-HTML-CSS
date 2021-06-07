@@ -297,7 +297,7 @@ header .menu a:hover{
     flex:auto;
     width: 20%;
     background-color: white;
-    height: 550px;
+    min-height: 550px;
     margin: 5px;
     border-radius: 15px;
 }

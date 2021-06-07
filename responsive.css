@@ -73,14 +73,14 @@
         width: 100%;
     }
     .activities{
-        /* flex-direction: column; */
+        flex-direction: column;
         margin: 0 auto;
         text-align: center;
-        flex-direction: none;
+        flex: none;
     }
     .activity{
-        width: 50%;
-        margin: 20px;
+        width: 80%;
+        margin: 20px auto;
     }
     .activity-desc p{
         font-size: 20px;
