@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Source+Serif+Pro:wght@200;300&display=swap');
+
+:root{
+    --logo_font : 'Pacifico',cursive;
+    --header_font : 'Lobster', cursive;
+    --text_font : 'Source Serif Pro', serif;
+
+    --yellow : #faf146
+     
+}
+body{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+/* container */
+.container{
+    max-width: 1170px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* header */
+header{
+    background-color: rgba(56, 57, 64 ,0.7);
+    width:100%;
+    height: 70px;
+    color: var(--yellow);
+    position: fixed;
+    border-bottom: 2px var(--yellow) solid;
+}
+
+header .logo{
+    font-weight: bold;
+    font-size: 24px;
+    font-style: italic;
+    line-height: 70px;
+    float: left;
+    margin-left: 10px;
+    display: inline-block;
+}
+header .menu{
+    float: right;
+}
+
+header a{
+    color: whitesmoke;
+    font-size: 14px;
+    margin-top: 15px;
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 10%;
+}
+
+
+header a:hover{
+    background-color: var(--yellow);
+    color: gray;
+}
+
+.menu-icon{
+    float: right;
+    color: var(--yellow);
+    float: right;
+    font-size: 25px;
+    padding: 25px;
+    display: none!important;
+}
+/* content */
+.top-wrapper{
+    background-image: url(./img/cover.jpeg);
+    height: 600px;
+    background-size: cover;
+}
+/* footer */
+.fa{
+    margin: 0 5px;
+}
+
