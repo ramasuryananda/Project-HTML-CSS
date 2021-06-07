@@ -1,15 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Source+Serif+Pro:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Mate&family=Pacifico&family=Source+Serif+Pro:wght@200;300&display=swap');
 
 :root{
     --logo_font : 'Pacifico',cursive;
-    --header_font : 'Lobster', cursive;
+    --header_font : 'Dancing Script',cursive;
     --text_font : 'Source Serif Pro', serif;
-
+    --mate_font : 'Mate',serif;
     --yellow : #faf146
      
 }
-body{
-    margin: 0;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p, div {
+  margin: 0;
+  padding: 0;
+}
+html {
+    scroll-behavior: smooth;
 }
 
 a{
@@ -25,12 +36,13 @@ a{
 
 /* header */
 header{
-    background-color: rgba(56, 57, 64 ,0.7);
+    background-color: rgba(56, 57, 64 ,0.8);
     width:100%;
     height: 70px;
     color: var(--yellow);
     position: fixed;
     border-bottom: 2px var(--yellow) solid;
+    z-index: 100;
 }
 
 header .logo{
@@ -41,24 +53,30 @@ header .logo{
     float: left;
     margin-left: 10px;
     display: inline-block;
+    z-index: 101;
+    font-family: var(--logo_font);
 }
 header .menu{
     float: right;
 }
 
-header a{
+header .menu a{
     color: whitesmoke;
-    font-size: 14px;
+    font-size: 18px;
     margin-top: 15px;
+    margin-right: 5px;
     display: inline-block;
     padding: 10px 25px;
-    border-radius: 10%;
+    border-radius: 15px;
+    font-family: var(--header_font);
+    transition: all .2s;
 }
 
 
-header a:hover{
+header .menu a:hover{
     background-color: var(--yellow);
     color: gray;
+    font-weight: bold;
 }
 
 .menu-icon{
@@ -68,15 +86,164 @@ header a:hover{
     font-size: 25px;
     padding: 25px;
     display: none!important;
+    height: 100%;
+    background: none;
 }
+
 /* content */
 .top-wrapper{
-    background-image: url(./img/cover.jpeg);
-    height: 600px;
+    background-image: url(./img/cover.jpg);
+    /* height: 700px; */
+    padding: 300px 0 100px 0;
+    max-height: 800px;
     background-size: cover;
+    box-shadow:inset 0 0 0 2000px rgba(56, 57, 64 ,0.7);
+    /* padding-top: 300px; */
+    text-align: center;
 }
+
+.top-wrapper h1{
+    color: var(--yellow);
+    letter-spacing: 5px;
+    border-bottom: 1px var(--yellow) solid;
+    font-family: var(--mate_font);
+    line-height: 70px;
+    font-size: 40px;
+}
+
+.top-wrapper h2{
+    color: whitesmoke;
+    letter-spacing: 2px;
+    font-family: var(--header_font);
+    padding: 20px 0px;
+    font-weight: bolder;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.top-wrapper p{
+    color: whitesmoke;
+    font-size: 20px;
+    line-height: 25px;
+    font-family: var(--text_font);
+    font-weight: bold;
+}
+
+.top-wrapper p .Bali{
+    color: var(--yellow);
+}
+.btn{
+    padding: 20px 30px;
+    display: inline-block;
+    border-radius: 10px;
+    /* margin-top: 200px; */
+}
+.get-ticket{
+    color: var(--yellow);
+    background-color: black;
+    font-family: var(--header_font);
+    font-weight: bold;
+    box-shadow: 0 5px var(--yellow);
+    margin-top: 45px;
+}
+
+.get-ticket:active {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+  }
+.top-wrapper a{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.show-wrapper{
+    padding: 100px 0 50px 0px;
+    background-color: whitesmoke;
+    color: black;
+    text-align: center;
+}
+
+.show-header{
+    margin-left: 20px;
+    border-bottom: 2px var(--yellow) outset;
+    font-family: var(--header_font);
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 40px;
+}
+
+.shows{
+    display: inline-block;
+}
+
+
+.show-card{
+    width: 90%;
+    display: flex;
+    background-color: white;
+    /* height: 350px; */
+    border-radius: 15px;
+    margin: 20px auto;
+    box-shadow: 10px 5px 5px 5px rgba(56, 57, 64 ,0.5);
+    transition: transform .2s;
+}
+.show-card:hover{
+    transform: scale(1.05);
+}
+
+.show-card img{
+    height: 95%;
+    width: 50%;
+    margin: 10px ;
+    border-radius: 10px;
+    box-shadow: 3px 2px 2px rgba(56, 57, 64 ,0.8);
+}
+
+.show-content img.left{
+    float: left;
+}
+
+.show-content img.right{
+    float: right;
+}
+
+.show-content{
+    flex: auto;
+}
+
+.show-desc{
+    text-align: justify;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.show-desc h2{
+    font-size: 30px;
+    margin-bottom: 5px;
+    padding-bottom: 1px;
+    border-bottom: 2px double var(--yellow);
+    font-family: var(--header_font);
+}
+
+.show-desc p{
+    margin: 10px 0px;
+    font-family: var(--text_font);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.show-desc .Schedule{
+    margin-top: auto;
+    font-family: var(--mate_font);
+    font-weight: bolder;
+    font-size: 25px;
+}
+
 /* footer */
 .fa{
-    margin: 0 5px;
+    margin: 0 10px;
 }
 
