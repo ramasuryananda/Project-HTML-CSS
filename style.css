@@ -11,8 +11,18 @@
 
 * {
   box-sizing: border-box;
+  
 }
 
+
+html,body{
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px !important;
+    overflow-x: hidden; 
+}
 html, body,
 ul, ol, li,
 h1, h2, h3, h4, h5, h6, p, div {
@@ -82,7 +92,6 @@ header .menu a:hover{
 .menu-icon{
     float: right;
     color: var(--yellow);
-    float: right;
     font-size: 25px;
     padding: 25px;
     display: none!important;
@@ -92,13 +101,11 @@ header .menu a:hover{
 
 /* content */
 .top-wrapper{
-    background-image: url(./img/cover.jpg);
+    background-image: linear-gradient(rgba(56, 57, 64 ,0.7),rgba(56, 57, 64 ,0.6),rgba(203, 221, 152, 0.5)),url(./img/cover.jpg);
     /* height: 700px; */
     padding: 300px 0 100px 0;
     max-height: 800px;
     background-size: cover;
-    box-shadow:inset 0 0 0 2000px rgba(56, 57, 64 ,0.7);
-    /* padding-top: 300px; */
     text-align: center;
 }
 
@@ -253,6 +260,123 @@ header .menu a:hover{
     font-size: 25px;
 }
 
+
+.activity-wrapper{
+    padding: 100px 0px 50px 0px;
+    background-color: rgba(56, 57, 64);
+    border-top: 4px solid var(--yellow);
+    text-align: center;
+}
+
+.activity-header{
+    text-align: left;
+    margin: 0px 15px 20px 15px;
+    color: var(--yellow);
+    font-family: var(--yellow);
+    font-size: 35px;
+    font-family: var(--header_font);
+    position: relative;
+}
+.activity-header::after{
+    content: "";
+    height: 0.18rem;
+    background-color: white;
+    width: 75%;
+    position: absolute;
+    left: 250px;
+    top: 20px;
+}
+
+.activities{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.activity{
+    flex:auto;
+    width: 20%;
+    background-color: white;
+    height: 550px;
+    margin: 5px;
+    border-radius: 15px;
+}
+
+.activity-item{
+    display: flex;
+    flex-direction: column;
+}
+.activity-icon{
+    width:100%;
+    height:250px;
+    /* padding: 10px 15px; */
+    margin: 0 auto;
+    position: relative;
+    transition: transform .2s;
+    border-bottom: 5px solid var(--yellow);
+    border-radius: 15px;
+}
+
+.activity-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+}
+
+.activity-icon .activity-title{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(56, 57, 64 ,0.8);
+    border-radius: 15px;
+}
+.activity-icon .activity-title p{
+    position: absolute;
+    top: 44%;
+    width: 100%;
+    color: white;
+    text-align: center;
+    /* display: none; */
+    font-size: 20px;
+    font-family: var(--text_font);
+    color: var(--yellow);
+    font-weight: bold;
+}
+
+
+
+.activity-icon:hover{
+    transform:scale(1.05);
+}
+
+.activity-icon:hover .activity-title{
+    opacity: 0.75;
+}
+
+.activity-desc{
+    width: 80%;
+    text-align: justify;
+    margin: 5px auto;
+}
+
+.activity-desc p{
+    font-family: var(--mate_font);
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+
+.clear{
+    clear: auto;
+}
 /* footer */
 .fa{
     margin: 0 10px;

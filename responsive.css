@@ -19,9 +19,8 @@
 
 @media all and (max-width: 1000px){
     .menu-icon{
-        display:block !important;
+        display:inline-block !important;
       }
-
     header .menu a{
         display: none;
     }
@@ -61,7 +60,7 @@
 
     .show-card{
         flex-direction: column;
-        flex: :none;
+        flex:none;
     }
 
     .show-card img{
@@ -72,5 +71,18 @@
     }
     .show-desc{
         width: 100%;
+    }
+    .activities{
+        /* flex-direction: column; */
+        margin: 0 auto;
+        text-align: center;
+        flex-direction: none;
+    }
+    .activity{
+        width: 50%;
+        margin: 20px;
+    }
+    .activity-desc p{
+        font-size: 20px;
     }
 }
