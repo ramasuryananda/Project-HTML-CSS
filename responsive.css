@@ -1,4 +1,4 @@
-@media all and (max-width:1200px){
+@media all and (max-width:1000){
     .top-wrapper h1{
         font-size: 35px;
     }
@@ -17,7 +17,7 @@
 }
 
 
-@media all and (max-width: 1000px){
+@media all and (max-width: 800px){
     .menu-icon{
         display:inline-block !important;
       }
@@ -84,5 +84,31 @@
     }
     .activity-desc p{
         font-size: 20px;
+    }
+    .about-content{
+        flex-direction: column;
+        flex: none;
+    }
+
+    .about-header::after{
+        width: 36%;
+    }
+    
+    .about-header::before{
+        width: 36%;
+    }
+
+    .about-desc{
+        flex: none;
+        width: 100%;
+    }
+
+    .about-socmed .fa{
+        float: none;
+    }
+
+    .socmed{
+        padding-top: none;
+        margin: 10px auto;
     }
 }
