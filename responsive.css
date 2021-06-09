@@ -1,4 +1,13 @@
-@media all and (max-width:1000){
+@media all and (max-width:1000px){
+    header .logo{
+        font-size: 20px;
+    }
+    
+    header .menu a{
+        padding: 10px 15px;
+        margin-right: 2px;
+    }
+
     .top-wrapper h1{
         font-size: 35px;
     }
@@ -14,10 +23,19 @@
     .show-card .Schedule{
         font-size: 20px;
     }
+
+    .activity{
+        width: 40%;
+        margin: 10px;
+    }
 }
 
 
-@media all and (max-width: 800px){
+@media all and (max-width: 670px){
+    header .logo{
+        font-size: 18px;
+    }
+    
     .menu-icon{
         display:inline-block !important;
       }
@@ -66,8 +84,15 @@
     .show-card img{
         width: 95%;
         box-shadow: 3px 2px 2px rgba(56, 57, 64 ,0.7);
-        margin-right: 15px;
-        margin-left: 15px;
+        margin: 15px auto;
+    }
+
+    .show-content img.left{
+        float: none;
+    }
+    
+    .show-content img.right{
+        float: none;
     }
     .show-desc{
         width: 100%;
@@ -85,6 +110,15 @@
     .activity-desc p{
         font-size: 20px;
     }
+
+    input, textarea{
+        width: 100%;
+    }
+
+    .booking-btn{
+        width: 100%;
+    }
+
     .about-content{
         flex-direction: column;
         flex: none;
@@ -110,5 +144,42 @@
     .socmed{
         padding-top: none;
         margin: 10px auto;
+    }
+
+    footer .logo{
+        /* text-align: center; */
+        height:min-content;
+        margin: 0 auto;
+        line-height: normal;
+        font-size: 30px;
+    }
+
+    footer .footer-list{
+        margin: 10px auto;
+        text-align: justify;
+    }
+
+    .footer-list a{
+        letter-spacing: 5px;
+        font-size: 20px;
+    }
+
+    footer .footer-contents{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 300px){
+    header .logo{
+        font-size: 14px;
+    }
+
+    .menu-icon{
+        padding: 25px 2px 2px 2px;
+    }
+
+    footer .logo{
+        font-size: 20px;
     }
 }

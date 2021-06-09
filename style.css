@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Mate&family=Pacifico&family=Source+Serif+Pro:wght@200;300&display=swap');
-
+/* MAIN PROPERTY */
 :root{
     --logo_font : 'Pacifico',cursive;
     --header_font : 'Dancing Script',cursive;
@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6, p, div {
   padding: 0;
 }
 html {
-    scroll-behavior: smooth!important;
+    scroll-behavior: smooth;
 }
 
 a{
@@ -69,7 +69,6 @@ header .logo{
 header .menu{
     float: right;
 }
-
 header .menu a{
     color: whitesmoke;
     font-size: 18px;
@@ -99,10 +98,9 @@ header .menu a:hover{
     background: none;
 }
 
-/* content */
+/* top-content */
 .top-wrapper{
     background-image: linear-gradient(rgba(56, 57, 64 ,0.7),rgba(56, 57, 64 ,0.6),rgba(203, 221, 152, 0.5)),url(./img/cover.jpg);
-    /* height: 700px; */
     padding: 300px 0 100px 0;
     max-height: 900px;
     background-size: cover;
@@ -142,7 +140,6 @@ header .menu a:hover{
     padding: 20px 30px;
     display: inline-block;
     border-radius: 10px;
-    /* margin-top: 200px; */
 }
 .get-ticket{
     color: var(--yellow);
@@ -154,7 +151,7 @@ header .menu a:hover{
     position: relative;
     animation: MoveUpDown 1.5s linear infinite;
 } 
-
+/* animasi updown */
 @keyframes MoveUpDown {
     0%, 100% {
       bottom: 0;
@@ -173,7 +170,7 @@ header .menu a:hover{
     text-decoration: none;
     font-size: 20px;
 }
-
+/* show-content */
 .show-wrapper{
     padding: 100px 0 50px 0px;
     background-color: whitesmoke;
@@ -250,7 +247,7 @@ header .menu a:hover{
     margin: 10px 0px;
     font-family: var(--text_font);
     font-weight: bold;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .show-desc .Schedule{
@@ -259,7 +256,7 @@ header .menu a:hover{
     font-weight: bolder;
     font-size: 25px;
 }
-
+/* activity content */
 
 .activity-wrapper{
     padding: 100px 0px 50px 0px;
@@ -378,6 +375,99 @@ header .menu a:hover{
     clear: auto;
 }
 
+/* booking -content*/
+.booking-wrapper {
+    padding: 100px 0 50px 0px;
+    background-color: white;
+    border-top: 4px solid var(--yellow);
+    color: black;
+    text-align: left;
+}
+
+.booking-header {
+    text-align: left;
+    margin: 0px 15px 0px 15px;
+    color: black;
+    font-family: var(--yellow);
+    font-size: 35px;
+    font-family: var(--header_font);
+    position: relative;
+}
+
+.booking-header::after {
+    content: "";
+    height: 0.18rem;
+    background-color: var(--yellow);
+    width: 75%;
+    position: absolute;
+    left: 250px;
+    top: 20px;
+}
+
+.form {
+    padding: 50px 20px;
+    margin-left: 10px;
+}
+
+.booking-image {
+    background-image: linear-gradient(90deg,rgba(255, 255, 255 ,0.8),rgba(255, 255, 255 ,0.6),rgba(203, 221, 152, 0.5)),url(./img/pura2.png);
+    background-size: cover;
+    box-shadow: 5px 3px 3px 3px rgba(245, 245, 245 ,0.8);
+}
+
+.form-group {
+    padding-bottom: 20px;
+}
+
+.form-group p {
+    font-size: 20px;
+    line-height: 25px;
+    font-family: var(--text_font);
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style: none;
+    /* border: 1px outset rgba(245, 245, 245 ,0.8); */
+    box-shadow: 5px 5px 5px 4px rgba(225, 225, 225 ,0.8);
+    border-radius: 10px;
+    font-family: var(--text_font);
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: auto;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+
+.booking-button {
+    background: var(--yellow);
+    color: black;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 5px solid #ebb434;
+    text-decoration: none;
+    font-family: var(--header_font);
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+    width: 50%;
+    margin-top: auto!important;
+}
+
+/* margin-fa */
+.fa{
+    margin: 0 10px;
+}
+/* about-content */
 .about-wrapper{
     padding: 50px 0px;
     border-top: 1px solid var(--yellow);
@@ -436,6 +526,7 @@ header .menu a:hover{
     font-size: 40px;
     margin: 10px;
     left: 5px;
+    letter-spacing: 2px;
 }
 .desc-title::before{
     content: "";
@@ -452,7 +543,6 @@ header .menu a:hover{
     padding: 15px;
     background-color: whitesmoke;
     border-radius: 10px;
-    /* min-height: 145px; */
     margin: 5px;
     box-shadow: 5px 3px 3px 3px rgba(56, 57, 64 ,0.5);
     font-family: var(--text_font);
@@ -488,9 +578,10 @@ header .menu a:hover{
     color: var(--yellow);
     font-family: var(--mate_font);
     text-align: center;
-    font-size: 28px;
+    font-size: 35px;
     text-transform: uppercase;
     margin: 10px 0;
+    letter-spacing: 7px;
 
 }
 .socmed{
@@ -506,9 +597,18 @@ header .menu a:hover{
     text-align: center;
     height: 25%;
     display: inline-block;
+    border: none;
     /* vertical-align: middle; */
     line-height: 50px;
+    transition: all .2s;
 }
+
+.socmed:hover{
+    transform: scale(1.05);
+    background-color: var(--yellow);
+    color: black;
+}
+
 
 .about-socmed a{
     color:black;
@@ -540,15 +640,65 @@ header .menu a:hover{
 .about-maps{
     box-shadow: 15px 13px 13px 13px rgba(56, 57, 64 ,0.5);
     border-radius: 15px;
+    transition: all .2s ;
+}
+
+.about-maps:hover{
+    transform: scale(1.025);
 }
 .about-maps iframe{
     border-radius: 15px;
     border: 5px solid var(--yellow);
 }
-
-
 /* footer */
-.fa{
-    margin: 0 10px;
+footer{
+    background-color: var(--yellow);
+    padding: 2px;
+    border-top: 1px solid whitesmoke;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+}
+
+footer .footer-contents{
+    display: inline-block;
+    width: 100%;
+}
+footer .logo{
+    font-family: var(--logo_font);
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    float: left;
+    height: 100px;
+    line-height: 100px;
+    /* background-color: red; */
+}
+
+.footer-copyright{
+    font-family: var(--mate_font);
+    float: left;
+    text-align: center;
+    /* background-color: red; */
+    width: 100%;
+    border-top: 1px solid rgba(56, 57, 64 ,0.8);
+}
+
+.fa-heart{
+    color: #ff0000;
+}
+
+.footer-list{
+    list-style: none;
+    /* background-color: blue  ; */
+    float: right;
+    padding: 10px 10px 0 10px;
+}
+
+.footer-list a{
+    color: black;
+    font: var(--text_font);
+    letter-spacing: 5px; 
 }
 
